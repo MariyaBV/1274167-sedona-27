@@ -1,0 +1,12 @@
+.social li {
+  max-width: 47px;
+  height: 47px;
+  background: #81b3d2;
+}
+
+  .social li a {
+    max-width: 18px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+  }
