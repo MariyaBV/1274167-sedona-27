@@ -1,7 +1,9 @@
 .social li {
-  max-width: 47px;
+  width: 47px;
   height: 47px;
   background: #81b3d2;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
   .social li a {
