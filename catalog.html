@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="white-background">
-    <header class="main-header">
+    <header>
       <a href="index.html">
         <img src="img/logo.png" width="140" height="71" alt="Логотип города «Седона»">
       </a>
@@ -27,34 +27,22 @@
 
       <section>
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form action="#" method="post">
+        <form class="filter" action="#" method="post">
           <div>
-            <p>Инфаструктура:</p>
-            <label>
-              <input type="checkbox" name="Бассейн" value="Бассейн">Бассейн
-            </label>
-            <label>
-              <input type="checkbox" name="Парковка" value="Парковка">Парковка
-            </label>
-            <label>
-              <input type="checkbox" name="wi-fi" value="wi-fi">wi-fi
-            </label>
+            <p class="filter__title">Инфаструктура:</p>
+            <input id="pool" type="checkbox" name="Бассейн" value="Бассейн"><label for="pool">Бассейн</label>
+            <input id="parking" type="checkbox" name="Парковка" value="Парковка"><label for="parking">Парковка</label>
+            <input id="wiFi" type="checkbox" name="wi-fi" value="wi-fi"><label for="wiFi">wi-fi</label>
           </div>
           <div>
-            <p>Тип жилья:</p>
-            <label>
-              <input type="checkbox" name="Гостиница" value="Гостиница">Гостиница
-            </label>
-            <label>
-              <input type="checkbox" name="Мотель" value="Мотель">Мотель
-            </label>
-            <label>
-              <input type="checkbox" name="Апартаменты" value="Апартаменты">Апартаменты
-            </label>
+            <p class="filter__title">Тип жилья:</p>
+            <input id="hotel" type="checkbox" name="Гостиница" value="Гостиница"><label for="hotel">Гостиница</label>
+            <input id="motel" type="checkbox" name="Мотель" value="Мотель"><label for="motel">Мотель</label>
+            <input id="apartment" type="checkbox" name="Апартаменты" value="Апартаменты"><label for="apartment">Апартаменты</label>
           </div>
           <div>
-            <p>Стоимость в сутки(р):</p>
-            <table>
+            <p class="filter__title">Стоимость в сутки (р):</p>
+            <table class="filter__price">
               <tr>
                 <td>от 0</td>
                 <td>до 3000</td>
@@ -63,12 +51,12 @@
             <div>
               <input type="range" min="0" max="3000" step="100" value="500">
             </div>
-            <button type="button">Показать</button>
+            <button class="button button-transparent" type="button">Показать</button>
           </div>
         </form>
-        <div>
-          <div>Найдено: <span>3</span></div>
-          <div>Сортировка:</div>
+        <div class="sorting">
+          <div class="sorting__found">Найдено: <span>3</span></div>
+          <div class="sorting__title">Сортировка:</div>
           <a href="#">По цене</a>
           <a href="#">По типу</a>
           <a href="#">По рейтингу</a>
