@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Город «Седона»</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Город «Седона»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
   <body>
     <div class="white-background">
       <header class="main-header">
-        <a href="#">
+        <a class="logo-block" href="#">
           <img src="img/logo.png" width="140" height="71" alt="Логотип города «Седона»">
         </a>
         <nav class="main-navigation">
-          <ul>
+          <ul class="flex-block__between">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
@@ -25,7 +25,9 @@
       <main>
         <section class="greeting-header">
           <h1 class="visually-hidden">Welcome to the gargeous sedona</h1>
-          <div><img src="img/welcome.png" width="459" height="353" alt="Welcome to the gargeous sedona" /></div>
+          <div class="greeting-header__img-block">
+            <img class="greeting-header__img" src="img/welcome.png" width="459" height="353" alt="Welcome to the gargeous sedona" />
+          </div>
         </section>
         <section class="advantages">
           <p class="advantages__text">
@@ -33,7 +35,7 @@
           </p>
           <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
 
-          <div class="advantages-block">
+          <div class="advantages-block flex-block__center">
             <div class="advantages-block__about blue-back">
               <h3>Настоящий городок</h3>
               <p>— №1 —</p>
@@ -45,7 +47,7 @@
             <span class="clear"></span>
           </div>
 
-          <div>
+          <div class="flex-block__center">
             <div class="advantages-block white-back">
               <img src="img/icon-house.svg" width="75" height="72" alt="Дом" />
               <h3>Жилье</h3>
@@ -69,7 +71,7 @@
             </div>
           </div>
 
-          <div class="advantages-block">
+          <div class="advantages-block flex-block__center">
             <img class="advantages-block__big-img" src="img/devil-bridge.jpg" width="800" height="256" alt="Мост дьявола" />
             <div class="advantages-block__about blue-back">
               <h3>Там есть Мост дьявола</h3>
@@ -80,7 +82,7 @@
             </div>
             <span class="clear"></span>
           </div>
-          <div>
+          <div class="flex-block__center">
             <div class="advantages-block grey-back">
               <h3>Небольшая площадь</h3>
               <p>— №3 —</p>
@@ -103,14 +105,14 @@
               </p>
             </div>
           </div>
-</section>
+        </section>
         <section class="hotel-search">
           <p class="hotel-search__subtitle">Заинтересовались?</p>
           <p class="hotel-search__text">
             Укажите предполагаемые даты поездки,<br />
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <div>
+          <div class="hotel-search__form-block">
             <button class="button button-big" type="button">Поиск гостиницы в седоне</button>
             <form class="hotel-search__form" action="#" method="post">
               <p>
