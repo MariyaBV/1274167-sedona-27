@@ -28,41 +28,45 @@
         <section>
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter" action="#" method="post">
-            <div>
-              <p class="filter__title">Инфаструктура:</p>
-              <input id="pool" type="checkbox" name="Бассейн" value="Бассейн"><label for="pool">Бассейн</label>
-              <input id="parking" type="checkbox" name="Парковка" value="Парковка"><label for="parking">Парковка</label>
-              <input id="wiFi" type="checkbox" name="wi-fi" value="wi-fi"><label for="wiFi">wi-fi</label>
-            </div>
-            <div>
-              <p class="filter__title">Тип жилья:</p>
-              <input id="hotel" type="checkbox" name="Гостиница" value="Гостиница"><label for="hotel">Гостиница</label>
-              <input id="motel" type="checkbox" name="Мотель" value="Мотель"><label for="motel">Мотель</label>
-              <input id="apartment" type="checkbox" name="Апартаменты" value="Апартаменты"><label for="apartment">Апартаменты</label>
-            </div>
-            <div>
-              <p class="filter__title">Стоимость в сутки (р):</p>
-              <table class="filter__price">
-                <tr>
-                  <td>от 0</td>
-                  <td>до 3000</td>
-                </tr>
-              </table>
+            <div class="filter__item">
               <div>
-                <input type="range" min="0" max="3000" step="100" value="500">
+                <p class="filter__item_title">Инфаструктура:</p>
+                <input id="pool" type="checkbox" name="Бассейн" value="Бассейн"><label for="pool">Бассейн</label>
+                <input id="parking" type="checkbox" name="Парковка" value="Парковка"><label for="parking">Парковка</label>
+                <input id="wiFi" type="checkbox" name="wi-fi" value="wi-fi"><label for="wiFi">wi-fi</label>
               </div>
-              <button class="button button-transparent" type="button">Показать</button>
+              <div>
+                <p class="filter__item_title">Тип жилья:</p>
+                <input id="hotel" type="checkbox" name="Гостиница" value="Гостиница"><label for="hotel">Гостиница</label>
+                <input id="motel" type="checkbox" name="Мотель" value="Мотель"><label for="motel">Мотель</label>
+                <input id="apartment" type="checkbox" name="Апартаменты" value="Апартаменты"><label for="apartment">Апартаменты</label>
+              </div>
+            </div>
+            <div class="filter__item">
+              <p class="filter__item_title">Стоимость в сутки (р):</p>
+              <div class="price-controls">
+                <label class="min-price">от <input type="number" name="min-price" value="0" min="0" max="2999"></label>
+                <label class="max-price">до <input type="number" name="max-price" value="3000" min="1" max="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="button button-transparent" type="submit">Показать</button>
             </div>
           </form>
           <div class="sorting">
-            <div class="sorting__found-block">
-              <div class="sorting__found">Найдено: <span>3</span></div>
-              <div class="sorting__title">Сортировка:</div>
+            <div class="found-block">
+              <div class="found-block__found">Найдено: <span>3</span></div>
+              <div class="found-block__title">Сортировка:</div>
               <a href="#">По цене</a>
               <a href="#">По типу</a>
               <a href="#">По рейтингу</a>
             </div>
-            <div>
+            <div class="arrow-block">
               <a href="#" title="по возрастанию">▲</a>
               <a href="#" title="по убыванию">▼</a>
             </div>

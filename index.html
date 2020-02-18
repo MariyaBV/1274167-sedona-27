@@ -36,9 +36,9 @@
           <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
 
           <div class="advantages-block flex-block__center">
-            <div class="advantages-block__about blue-back">
+            <div class="block-about blue-back">
               <h3>Настоящий городок</h3>
-              <p>— №1 —</p>
+              <p class="block-about__number">— №1 —</p>
               <p>
                 Седона — не аттракцион для туристов, там течет своя жизнь
               </p>
@@ -47,7 +47,7 @@
             <span class="clear"></span>
           </div>
 
-          <div class="flex-block__center">
+          <div class="flex-block__center advantages-block__white-back">
             <div class="advantages-block white-back">
               <img src="img/icon-house.svg" width="75" height="72" alt="Дом" />
               <h3>Жилье</h3>
@@ -73,9 +73,9 @@
 
           <div class="advantages-block flex-block__center">
             <img class="advantages-block__big-img" src="img/devil-bridge.jpg" width="800" height="256" alt="Мост дьявола" />
-            <div class="advantages-block__about blue-back">
+            <div class="block-about blue-back">
               <h3>Там есть Мост дьявола</h3>
-              <p>— №2 —</p>
+              <p class="block-about__number">— №2 —</p>
               <p>
                 Да, по нему можно пройти! Если конечно вы осмелитесь
               </p>
@@ -113,24 +113,30 @@
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
           <div class="hotel-search__form-block">
-            <button class="button button-big" type="button">Поиск гостиницы в седоне</button>
+            <button id="buttonSearchHotel" class="button button-big" type="button">Поиск гостиницы в седоне</button>
             <form class="hotel-search__form" action="#" method="post">
               <p>
                 <label>
-                  Дата заезда <input type="date" name="arrivalDate" value="2017-04-24" />
+                  <span>Дата заезда</span> <input type="date" name="arrivalDate" value="2017-04-24" />
                 </label>
               </p>
               <p>
                 <label>
-                  Дата выезда <input type="date" name="departureDate" value="2017-07-04" />
+                  <span>Дата выезда </span><input type="date" name="departureDate" value="2017-07-04" />
                 </label>
               </p>
-              <p>
+              <p class="guests">
                 <label>
-                  Взрослые <input type="number" name="adults" min="1" value="2" />
+                  Взрослые
+                  <span class="minus">—</span>
+                  <input type="number" name="adults" min="1" value="2" />
+                  <span class="plus">+</span>
                 </label>
                 <label>
-                  Дети <input type="number" name="children" min="0" value="0" />
+                  Дети
+                  <span class="minus">—</span>
+                  <input type="number" name="children" min="0" value="0" />
+                  <span class="plus">+</span>
                 </label>
               </p>
               <button class="button button-blue button-big" type="button">Найти</button>
@@ -176,5 +182,6 @@
         </p>
       </footer>
     </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
