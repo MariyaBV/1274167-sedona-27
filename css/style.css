@@ -948,11 +948,13 @@ vertical-align: middle;
 
 .block-rating {
   max-width: 125px;
+  display: flex;
+  flex-flow: column;
 }
 
 .block-stars {
   margin-top: 20px;
-  margin-left: 17px;
+  margin-left: auto;
 }
 
 /*стили для js*/
