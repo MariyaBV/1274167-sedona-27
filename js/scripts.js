@@ -11,8 +11,10 @@ function openSearchHotelBlock() {
     e.preventDefault();
     if (formSearchHotel[0].classList.contains('open')) {
       formSearchHotel[0].classList.remove('open');
+      console.log('remove');
     } else {
       formSearchHotel[0].classList.add('open');
+      console.log('add');
     }
   });
 }

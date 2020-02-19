@@ -967,3 +967,34 @@ vertical-align: middle;
 .open {
   display: block;
 }
+
+
+/*стили для IE 11*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .logo-block {
+    margin-left: -70px;
+    left: 50%;
+  }
+
+  .greeting-header::after {
+    left: -1.33px;
+  }
+
+  .price-controls label {
+    line-height: 28px;
+  }
+
+  .make {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .make span {
+    margin-right: 10px;
+  }
+
+  .main-footer {
+    height: 110px;
+  }
+}
