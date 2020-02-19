@@ -446,6 +446,7 @@ color: #81b3d2;
     width: 100%;
     max-width: 297px;
     pointer-events: none;
+    text-transform: uppercase;
   }
 
   .hotel-search__form input:hover {
