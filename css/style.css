@@ -347,6 +347,8 @@ input[type=number]::-webkit-outer-spin-button {
 .hotel-search__form-block button {
   width: 100%;
   padding: 30px 0;
+  z-index: 5;
+  position: relative;
 }
 
 .hotel-search__subtitle {
@@ -998,15 +1000,7 @@ input.error {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-300px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translateY(-85px);
   }
 
   100% {
