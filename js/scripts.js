@@ -8,15 +8,18 @@ function openSearchHotelBlock() {
   let buttonSearchHotel = document.getElementById('buttonSearchHotel');
   let formSearchHotel = document.querySelector('.hotel-search__form');
 
-  if (formSearchHotel) {
-    let arrivalDate = formSearchHotel.querySelector('[name=arrivalDate]');
-  }
-
   if (buttonSearchHotel) {
     buttonSearchHotel.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      formSearchHotel.classList.toggle('open');
-      arrivalDate.focus();
+      if (formSearchHotel) {
+        evt.preventDefault();
+        if (formSearchHotel.classList.contains('open')) {
+          formSearchHotel.classList.add('close');
+          formSearchHotel.classList.remove('open');
+        } else {
+          formSearchHotel.classList.remove('close');
+          formSearchHotel.classList.add('open');
+        }
+      }
     });
   }
 }

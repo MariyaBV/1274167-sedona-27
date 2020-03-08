@@ -118,7 +118,7 @@ input {
 .button-more-details {
   padding: 4px 17px;
   display: inline-block;
-  margin-bottom: 5px;
+  margin: 0 5px 5px 0;
   vertical-align: top;
   max-width: 700px;
 }
@@ -205,13 +205,17 @@ input {
 }
 
 /*преимущества*/
+.advantages {
+  position: relative;
+  z-index: 5;
+}
+
 .advantages h2 {
   text-align: center;
   font-size: inherit;
   line-height: 26px;
   font-weight: normal;
   margin: 27px auto 51px;
-  letter-spacing: 0.1px;
 }
 
 .advantages__text {
@@ -269,7 +273,7 @@ input {
   width: 100%;
   background-color: #eee;
   color: #000;
-  padding: 47px 0 57px;
+  padding: 47px 0 58px;
 }
 
 
@@ -309,7 +313,7 @@ input {
   width: 100%;
   background-color: #fff;
   color: #000;
-  padding: 56px 0 84px;
+  padding: 59px 0 81px;
 }
 
 .blue-back h3 {
@@ -328,7 +332,7 @@ input {
 }
 
 .block-about .block-about__number {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 /*поиск гостиницы*/
@@ -340,6 +344,7 @@ input {
   max-width: 568px;
   margin: 0 auto;
   position: relative;
+  background: #fff;
 }
 
 .hotel-search__form-block button {
@@ -353,7 +358,11 @@ input {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  margin: 50px auto 0;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+  z-index: 5;
+  position: relative;
 }
 
 .hotel-search__text {
@@ -361,7 +370,11 @@ input {
   line-height: 23px;
   text-align: center;
   font-weight: normal;
-  margin: 25px auto 48px;
+  margin: 0 auto;
+  padding: 25px 0 48px 0;
+  background: #fff;
+  z-index: 5;
+  position: relative;
 }
 
 .hotel-search__form {
@@ -374,8 +387,8 @@ input {
   left: 0;
   right: 0;
   top: 86px;
-  display: none;
   z-index: 4;
+  transition: 1.5s all;
 }
 
 .hotel-search__form input[type="number"]::-webkit-outer-spin-button,
@@ -413,7 +426,7 @@ input {
 }
 
 .hotel-search__form button {
-  padding: 17px 0;
+  padding: 17px 0 15px;
 }
 
 .hotel-search__form input {
@@ -548,7 +561,7 @@ input {
   margin: 0 auto;
   bottom: 0;
   padding: 0;
-  min-height: 125px;
+  min-height: 128px;
   z-index: 3;
 }
 
@@ -574,9 +587,16 @@ input {
   min-height: 122px;
 }
 
-
 .footer__hashtag {
+  margin: -4px 0 6px 26px;
+}
+
+.main-footer__index .footer__hashtag {
   margin: -4px 0 6px 36px;
+}
+
+.main-footer__index .footer__phone {
+  margin: 0 0 0 36px;
 }
 
 .footer__block-phone {
@@ -586,7 +606,7 @@ input {
 }
 
 .footer__phone {
-  margin: 0 0 0 36px;
+  margin: 0 0 0 26px;
 }
 
 .footer__phone a {
@@ -617,8 +637,7 @@ input {
   width: 46px;
   height: 48px;
   background: #81b3d2;
-  margin-bottom: 5px;
-  margin-left: 6px;
+  margin: 0 0 5px 6px;
   list-style-type: none;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -680,12 +699,20 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 4px;
-  margin-right: 16px;
+  margin-top: 10px;
+  margin-right: -7px;
 }
 
-.make span {
+.main-footer__index .make {
+  margin: 0 15px 0 0;
+}
+
+.make-by {
   margin-right: 10px;
+}
+
+.main-footer__index .make-by {
+  margin-right: 6px;
 }
 
 .icon-htmlacademy {
@@ -734,14 +761,15 @@ input {
   min-width: 319px;
 }
 
-.filter__item:last-child .filter__item_title {
+.filter__item:last-child .filter__item-title {
   margin: 0 0 10px;
 }
 
-.filter__item_title {
+.filter__item-title {
   font-size: 16px;
   line-height: 21px;
-  margin: 22px 0;
+  margin: 17px 0 21px;
+  letter-spacing: 0.3px;
 }
 
 .price-controls {
@@ -829,32 +857,38 @@ input {
   left: 80%;
 }
 
-.filter__item:first-child input[type="checkbox"] {
-  display: none;
-}
-
 .filter__item:first-child label {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   cursor: default;
-  padding: 0 0 22px 0;
+  padding: 0 0 21px 0;
   vertical-align: middle;
   display: block;
 }
 
-/*.filter__item:first-child label::before {
+.filter__item:first-child .checkbox-pool:focus{
+  outline: auto;
+}
+
+.filter__item:first-child label::before {
   content: "";
   color: #fff;
   display: inline-block;
   margin-right: 15px;
   position: relative;
   width: 25px;
-  height: 25px;
+  height: 23px;
   border: none;
-  vertical-align: top;
+  vertical-align: bottom;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
+  border: 1px solid transparent;
+}
+
+.filter__item:first-child input:focus + label::before {
+  outline: auto;
+  border: 1px solid #000;
 }
 
 .filter__item:first-child input:checked + label::before {
@@ -868,36 +902,6 @@ input {
 }
 
 .filter__item:first-child input:disabled:checked + label::before {
-  background-image: url("../img/checkbox-on-disable.svg");
-  background-repeat: no-repeat;
-}*/
-
-.filter__item:first-child .checkbox-pool {
-  content: "";
-  color: #fff;
-  display: inline-block;
-  margin-right: 15px;
-  position: relative;
-  width: 25px;
-  height: 25px;
-  border: none;
-  vertical-align: top;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.filter__item:first-child input:checked + label .checkbox-pool {
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-}
-
-.filter__item:first-child input:disabled + label .checkbox-pool {
-  background-image: url("../img/checkbox-off-disable.svg");
-  background-repeat: no-repeat;
-}
-
-.filter__item:first-child input:disabled:checked + label .checkbox-pool {
   background-image: url("../img/checkbox-on-disable.svg");
   background-repeat: no-repeat;
 }
@@ -937,9 +941,8 @@ input {
   font-size: 12px;
   line-height: 14px;
   font-weight: normal;
-  margin-right: 33px;
   border-bottom: 1px dotted #81b3d2;
-  margin-bottom: 5px;
+  margin: 0 33px 5px 0;
 }
 
 .arrow-block a {
@@ -995,7 +998,7 @@ input {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 10px 73px 23px 75px;
+  padding: 10px 73px 24px 71px;
 }
 
 .hotel-list li:first-child {
@@ -1041,12 +1044,13 @@ input {
 
 .hotel-list__text {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 13px;
   font-weight: normal;
+  margin-bottom: 16px;
 }
 
 .hotel-list__text span:first-child {
-  width: 110px;
+  width: 115px;
   display: inline-block;
 }
 
@@ -1057,8 +1061,7 @@ input {
   text-align: center;
   background-color: #f2f2f2;
   max-width: 110px;
-  margin-top: 45px;
-  margin-bottom: 0;
+  margin: 45px 0 0 0;
   padding: 4px 11px;
   font-weight: normal;
 }
@@ -1092,9 +1095,12 @@ input {
 
 /*стили для js*/
 .open {
-  display: block;
-  -webkit-animation: bounce 0.6s;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 1.5s;
+  animation: bounce 1.5s;
+}
+
+.close {
+  top: -400px;
 }
 
 input.error {
@@ -1103,14 +1109,13 @@ input.error {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-85px);
+    transform: translateY(-400px);
   }
 
   100% {
     transform: translateY(0);
   }
 }
-
 
 /*стили для IE 11*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

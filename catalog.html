@@ -5,7 +5,7 @@
     <title>Гостиницы города «Седона»</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
   </head>
   <body>
     <div class="white-background">
@@ -30,25 +30,26 @@
           <form class="filter" action="#" method="post">
             <div class="filter__item">
               <div>
-                <p class="filter__item_title">Инфаструктура:</p>
-                <input id="pool" type="checkbox" name="Бассейн" value="Бассейн">
-                <label for="pool">
-                  <a class="checkbox-pool"></a>Бассейн
-                </label>
-                <input id="parking" type="checkbox" name="Парковка" value="Парковка">
+                <p class="filter__item-title">Инфраструктура:</p>
+                <input checked class="visually-hidden" id="pool" type="checkbox" name="Бассейн" value="Бассейн">
+                <label for="pool">Бассейн</label>
+                <input class="visually-hidden" id="parking" type="checkbox" name="Парковка" value="Парковка">
                 <label for="parking">Парковка</label>
-                <input id="wiFi" type="checkbox" name="wi-fi" value="wi-fi">
+                <input class="visually-hidden" id="wiFi" type="checkbox" name="wi-fi" value="wi-fi">
                 <label for="wiFi">wi-fi</label>
               </div>
               <div>
-                <p class="filter__item_title">Тип жилья:</p>
-                <input id="hotel" type="checkbox" name="Гостиница" value="Гостиница"><label for="hotel">Гостиница</label>
-                <input id="motel" type="checkbox" name="Мотель" value="Мотель"><label for="motel">Мотель</label>
-                <input id="apartment" type="checkbox" name="Апартаменты" value="Апартаменты"><label for="apartment">Апартаменты</label>
+                <p class="filter__item-title">Тип жилья:</p>
+                <input checked class="visually-hidden" id="hotel" type="checkbox" name="Гостиница" value="Гостиница">
+                <label for="hotel">Гостиница</label>
+                <input checked class="visually-hidden" id="motel" type="checkbox" name="Мотель" value="Мотель">
+                <label for="motel">Мотель</label>
+                <input checked class="visually-hidden" id="apartment" type="checkbox" name="Апартаменты" value="Апартаменты">
+                <label for="apartment">Апартаменты</label>
               </div>
             </div>
             <div class="filter__item">
-              <p class="filter__item_title">Стоимость в сутки (р):</p>
+              <p class="filter__item-title">Стоимость в сутки (р):</p>
               <div class="price-controls">
                 <label class="min-price">от <input type="number" name="min-price" value="0" min="0" max="2999"></label>
                 <label class="max-price">до <input type="number" name="max-price" value="3000" min="1" max="3000"></label>
@@ -176,7 +177,7 @@
           </li>
         </ul>
         <p class="make">
-          <span>Website by</span>
+          <span class="make-by">Website by</span>
           <a class="icon-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
             <svg class="svg-htmlacademy" width="115" height="41" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 39">
               <title>logo_name</title>
@@ -197,6 +198,6 @@
         </p>
       </footer>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
