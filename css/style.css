@@ -48,10 +48,6 @@ img {
   clear: both;
 }
 
-input {
-  overflow: hidden;
-}
-
 .button {
   font: inherit;
   text-align: center;
@@ -438,6 +434,7 @@ input {
   font-weight: bold;
   line-height: 26px;
   padding-left: 13px;
+  overflow: hidden;
 }
 
 .arrival-date label,
@@ -749,6 +746,10 @@ input {
   padding: 0 70px;
 }
 
+.filter input {
+  overflow: hidden;
+}
+
 .filter__item:first-child {
   display: flex;
   justify-content: space-between;
@@ -847,6 +848,7 @@ input {
 .range-toggle:hover {
   border: 10px solid #ffffff;
   top: -11px;
+  left: calc(80% - 2px);
 }
 
 .range-toggle-min {
@@ -855,6 +857,14 @@ input {
 
 .range-toggle-max {
   left: 80%;
+}
+
+.range-toggle-min:hover {
+  left: calc(0% - 2px);
+}
+
+.range-toggle-max:hover {
+  left: calc(80% - 2px);
 }
 
 .filter__item:first-child label {
